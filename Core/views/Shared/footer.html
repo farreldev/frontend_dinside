@@ -1,0 +1,68 @@
+      </main>
+      <!-- CONTAINER -->
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 margin-bottom-30">
+              <article>
+                <h3><span>Tentang D-Inside</span></h3>
+                <p>Lorem ipsum dolor sit amet, coLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas varius arcu sed congue. Phasellus laoreet accumsan ipsum.</p>
+                <a href="">Kenapa Anda mesti berlangganan D-Inside? »</a>
+              </article>
+            </div>
+            <div class="col-md-4 margin-bottom-30">
+              <h3><span>Kontak</span></h3>
+              <ul class="kontak">
+                <li>
+                  <figure><img src="assets/images/icons/phone-icon.png" alt=""></figure>
+                  +6221 5794 0835
+                </li>
+                <li>
+                  <figure><img src="assets/images/icons/fax.png" alt=""></figure>
+                  +6221 5794 0836
+                </li>
+                <li>
+                  <figure><img src="assets/images/icons/email.png" alt=""></figure>
+                  <a href="#">marketing@dinside.id</a>
+                  <a href="#">redaksi@dinside.id</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4 margin-bottom-30">
+              <div class="poweredby">
+                Powered By:
+                <figure>
+                  <img src="assets/images/katadata-logo.png" alt="">
+                  <img src="assets/images/hol-logo.png" alt="">
+                </figure>
+              </div>
+              @@include('sosmed.html')
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="copyright">
+                    ©2016 Katadata and Hukum Online. All rights reserved.
+                  </div>
+              </div>
+          </div>
+        </div>
+      </footer>
+      <!-- FOOTER -->
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/vendor.min.js" ></script>
+    <script src="assets/js/plugins.min.js" ></script>
+    <script src="assets/js/app.min.js" ></script>
+    
+    @@if (context.script) {
+      @@for(var i=0;i<script.length;i++) {
+        <script src="`+script[i]+`" ></script>
+      }
+    }
+
+  </body>
+</html>

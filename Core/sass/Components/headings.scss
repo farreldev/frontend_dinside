@@ -1,0 +1,56 @@
+h1 {
+    font-family: "adelle_sansbold";
+    font-size: 57px;
+    padding: 15px 0;
+    a {
+        color: white;
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+h3 {
+    margin: 0 0 30px;
+    font-family: "adelle_sansextrabold";
+    font-size: 23px;
+    @include breakpoint(mobile) {
+        font-family: "adelle_sansbold";
+        font-size: 18px;
+    }
+    span {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+            position: absolute;
+            top: 0;
+            content: "";
+            display: block;
+            width: 15px;
+            height: 34px;
+            @include breakpoint(mobile) {
+                top: -5px;
+            }
+            background: $orange;
+        }
+        &.light {
+            color: white;
+        }
+    }
+    strong {
+        color: $orange;
+    }
+}
+
+h5 {
+    font-family: "adelle_sansextrabold";
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $orange;
+    a {
+        color: $orange;
+        &:hover {
+            color: inherit;
+        }
+    }
+}

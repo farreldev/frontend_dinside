@@ -1,0 +1,46 @@
+.main-wrapping {
+    width: 100%;
+    overflow: hidden;
+}
+
+.site-container {
+    width: 100%;
+    // padding: 20px 0;
+    min-height: calc(100% - 250px);
+    .second-header {
+        padding: 20px 0 30px;
+        @include clearit;
+        .second-left {
+            float: left;
+            time {
+                padding: 23px 0 0;
+                margin-left: 80px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .second-right {
+            float: right;
+            position: relative;
+            top: 26px;
+            font-family: "adelle_sansregular";
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+    .sub-head-child-pages {
+        // padding: 65px 0 10px;
+        position: relative;
+        @include clearit;
+        height: 83px;
+        border-bottom: 1px solid #aaaaaa; 
+        h2 {
+            position: relative;
+            top: 28px;
+            font-family: "adelle_sansextrabold";
+            font-size: 46px;
+            text-transform: uppercase;
+            color: $orange;
+        }
+    }
+}

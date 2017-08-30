@@ -1,0 +1,156 @@
+@import "bourbon";
+
+/* ABSTRACTS */
+@import
+	'../Abstracts/variables',
+	'../Abstracts/functions',
+    '../Abstracts/mixins'; 
+    
+.article-details {
+    .article-read {
+        .two-col-left-big {
+            article {
+                p {
+                    font-size: 18px;
+                    margin-bottom: 28px;
+                    line-height: 1.4em;
+                }
+            }
+        }
+        .title-headline {
+            h1 {
+                font-size: 2.8em;
+            }
+            p {
+                margin-bottom: 30px;
+                width: 75%;
+                font-family: "adelle_sanslight_italic";
+                font-size: 21px;
+                line-height: 1.4em;
+                @include breakpoint(mobile) {
+                    width: 100%;
+                }
+            }
+        }
+        .big-images {
+            border-bottom: 1px solid #ddd;
+            img {
+                width: 100%;
+                @include breakpoint(mobile) {
+                    padding: 0 15px;
+                }
+            }
+            .foto-caption {
+                padding: 20px 0;
+                @include clearit;
+                img {
+                    float: left;
+                    position: relative;
+                    left: -22px;
+                    width: 22px;
+                    margin-right: 15px;
+                    position: relative;
+                    margin-bottom: 50px;
+                    @include breakpoint(mobile) {
+                        float: left;
+                        left: 0;
+                        margin-bottom: 0;
+                    }
+                }
+                p {
+                    position: relative;
+                    left: -20px;
+                    top: -5px;
+                    font-family: "adelle_sanslight";
+                    font-size: 14px;
+                    line-height: 1.7em;
+                    color: #999999;
+                    @include breakpoint(mobile) {
+                        padding: 0 15px; 
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .small-image {
+            float: left;
+            margin-right: 25px;
+            margin-left: -75px;
+            width: 420px;
+            @include breakpoint(mobile) {
+                float: none;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+            figure {
+                height: 217px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .small-pic-caption {
+                padding: 20px 0;
+                display: inline-block;
+                @include clearit;
+                img {
+                    float: left;
+                    width: 22px;
+                    margin-right: 15px;
+                    margin-bottom: 50px;
+                    @include breakpoint(mobile) {
+                        margin-bottom: 0;
+                    }
+                }
+                p {
+                    position: relative;
+                    top: -5px;
+                    margin-bottom: 0;
+                    font-family: "adelle_sanslight";
+                    font-size: 14px;
+                    line-height: 1.7em;
+                    color: #999999;
+                }
+            }
+        }
+    }
+    .artikel-terkait {
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+        .item {
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+            }
+            article {
+                padding: 15px;
+                h4 {
+                    font-family: "adelle_sansbold";
+                    font-size: 24px;
+                    margin-bottom: 28px;
+                    a {
+                        font-family: inherit;
+                        font-size: inherit;
+                        text-transform:none;
+                        border-right: none;
+                        color: $hitam;
+                    }
+                }
+                a,time {
+                    font-family: "adelle_sansregular";
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #aaaaaa;
+                }
+                a {
+                    display: inline-block;
+                    padding-right: 18px;
+                    margin-right: 18px;
+                    border-right: 1px solid #aaaaaa;
+                }
+            }
+        }
+    }
+}

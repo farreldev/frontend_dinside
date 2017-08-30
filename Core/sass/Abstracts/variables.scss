@@ -1,0 +1,58 @@
+// FONT FAMILY
+$font_idx: 1;
+$font_default: Helvetica, Arial, sans-serif !default;
+
+// Font Family Ex. (name, 'fonts/path')
+$font_family: (
+    adelle_sanslight: 'fonts/adellesans-light-webfont',
+    adelle_sanslight_italic: 'fonts/adellesans-lightitalic-webfont',
+    adelle_sansregular: 'fonts/adellesans-regular-webfont',
+    adelle_sansbold: 'fonts/adellesans-bold-webfont',
+    adelle_sanssemibold: 'fonts/adellesans-semibold-webfont',
+    adelle_sansextrabold: 'fonts/adellesans-extrabold-webfont',
+    roboto_light: 'fonts/roboto-light-webfont',
+); 
+
+// BUTTONS
+// Default Button Ex. (button-class, background-code, font-color)
+$buttons:
+    ('btn-red', #D9534F, #FFFFFF),
+    ('btn-blue', #00aeef, #FFFFFF),
+    ('btn-abu', #eeeeee, #333333),
+    ('btn-green', #5CB85C, #FFFFFF);
+
+
+// Color
+
+$hitam: #333333;
+$biru: #00aeef;
+$orange: #f47920;
+$choco: #c75d2d;
+$abu: #afafaf;
+$abu-mid: #ababab;
+$abu-gelap: #605e5e;
+
+$tw: #00aaeb;
+$fb: #445f9f;
+$gp: #f83e2c;
+
+// text-align
+$align: left center right;
+
+// vertical-align
+$vertical-align: top middle bottom;
+
+// float
+$float: left right;
+
+// position
+$position: top right bottom left;
+
+// media-query
+$media-query:
+    (laptop, (min-width: 1366px)),
+    (desktop, (min-width: 1200px)),
+    (wide, (min-width: 992px)),
+    (tablet, (min-width: 768px) and (max-width: 991px)),
+    (mobile, (max-width: 767px)),
+    (small-mobile, (max-width: 360px));

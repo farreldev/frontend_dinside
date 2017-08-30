@@ -1,0 +1,32 @@
+.navigasi {
+    position: absolute;
+    width: 283px;
+    @include breakpoint(mobile) {
+        width: 100%;
+        left: -100%;
+    }
+    height: 100%;
+    left:-283px;
+    transition: left .3s ease-in-out;
+    top: 55px;
+    bottom: 0;
+    background: #1a3666;
+    z-index: 1;
+    ul {
+        position: relative;
+        padding: 30px;
+        li {
+            a {
+                padding: 10px;
+                display: block;
+                font-family: "adelle_sansextrabold";
+                font-size: 22px;
+                text-transform: uppercase;
+                color: $orange;
+            }
+        }
+    }
+    &.mnuOpen {
+        left: 0;
+    }
+}

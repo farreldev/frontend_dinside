@@ -1,0 +1,48 @@
+.head-grid-category {
+    padding-top: 30px;
+    border-bottom: 1px solid #ddd;
+    .grid-item {
+        article {
+            h3 {
+                margin: 25px 0 20px;
+                font-family: "adelle_sansbold";
+                font-size: 30px;
+                a {
+                    color: $hitam;
+                }
+            }
+            h4 {
+                margin: 25px 0 24px;
+                font-family: "adelle_sansbold";
+                font-size: 22px;
+                a {
+                    color: $hitam;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.5em;
+                margin-bottom: 25px;
+            }
+        }
+        &:not(:first-child) {
+            article {
+                p {
+                    margin-bottom: 18px;
+                }
+                .footer-article {
+                    ul {
+                        li {
+                            padding-right: 10px;
+                            margin-right: 10px;
+                            font-size: 10px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

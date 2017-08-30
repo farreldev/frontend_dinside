@@ -1,0 +1,90 @@
+.search-result-list,
+.recent-update,
+.article-list {
+    article {
+        margin-bottom: 30px;
+        @include clearit;
+        figure {
+            overflow: hidden;
+            float: left;
+            margin-right: 28px;
+            margin-bottom: 105px;
+            max-width: 182px;
+            max-height: 121px;
+            @include breakpoint(mobile) {
+                float: none;
+                margin-right: 0;
+                margin-bottom: 20px;
+                max-width: 100%;
+                max-height: auto;
+            }
+            img {
+                width: 100%;
+                transform: scale(1);
+                transition: transform 1s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        h4 {
+            font-family: "adelle_sanssemibold";
+            font-size: 24px;
+            margin-bottom: 20px;
+            a {
+                color: $hitam;
+                &:hover {
+                    color: $biru;
+                }
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5em;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.search-result-list,
+.article-list {
+    margin-bottom: 30px;
+    article {
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+    a.btn {
+        font-family: "adelle_sansextrabold";
+        font-size: 14px;
+        padding: 18px 0;
+        width: 100%;
+        border: 1px solid #d7d7d7;
+        text-transform: uppercase;
+        &:hover {
+            border: 1px solid darken(#d7d7d7, 8%);
+        }
+    }
+}
+
+.info-search-results {
+    span {
+        margin-bottom: 20px;
+        padding: 25px 0 20px;
+        display: block;
+        font-family: "adelle_sansregular";
+        font-size: 14px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #dddddd;
+        q {
+            &:before {
+                font-size: 16px;
+                content: '"';
+            }
+            &:after {
+                font-size: 16px;
+                content: '"';
+            }
+        }
+    }
+}
