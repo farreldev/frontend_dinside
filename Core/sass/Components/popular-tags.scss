@@ -27,15 +27,15 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                transform-origin: left;
-                transform: scaleX(0);
-                transition: transform .3s ease-in-out;
-                background: $orange;
+                // transform-origin: left;
+                // transform: scaleX(0);
+                transition: background .5s ease-in-out;
                 z-index: 1;
             }
             &:hover {
                 &:before {
-                    transform: scaleX(1);
+                    background: $orange;
+                    // transform: scaleX(1);
                 }
             }
         }

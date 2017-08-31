@@ -14,6 +14,9 @@
             float: left;
             display: inline-block;
             padding: 10px 0;
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
             .humburger-btn {
                 position: relative;
                 top: 2px;
@@ -23,6 +26,11 @@
                 width: 22px;
                 height: 14px;
                 cursor: pointer;
+                @include breakpoint(mobile) {
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                }
                 span {
                     position: absolute;
                     display: block;
@@ -69,12 +77,20 @@
                 color: $hitam;
             }
             .cari-btn {
+                @include breakpoint(mobile) {
+                    position: absolute;
+                    top: 11px;
+                    right: 0;
+                }
                 margin-left: 35px;
                 a {
                     text-decoration: none;
                     i {
                         font-size: 18px;
                         margin-right: 2px;
+                        @include breakpoint(mobile) {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
@@ -83,10 +99,26 @@
             position: relative;
             top: 6px;
             display: inline-block;
-            width: 156px;
             margin: 0 auto;
+            @include breakpoint(mobile) {
+                position: absolute;
+                top: 11px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @include breakpoint(small-mobile) {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
             img {
-                width: inherit;
+                width: 156px;
+                @include breakpoint(mobile) {
+                    width: 10em;
+                }
+                @include breakpoint(small-mobile) {
+                    width: 9em;
+                }
             }
         }
         .top-right {

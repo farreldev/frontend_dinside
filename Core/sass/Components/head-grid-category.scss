@@ -3,6 +3,12 @@
     border-bottom: 1px solid #ddd;
     .grid-item {
         article {
+            figure {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
             h3 {
                 margin: 25px 0 20px;
                 font-family: "adelle_sansbold";
@@ -27,6 +33,22 @@
         }
         &:not(:first-child) {
             article {
+                figure {
+                    width: 100%;
+                    @include breakpoint(mobile) {
+                        float: left;
+                        display: inline-block;
+                        margin-right: 15px;
+                        width: 150px;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                h4 {
+                    font-size: 20px;
+                    line-height: 1.3em; 
+                }
                 p {
                     margin-bottom: 18px;
                 }
