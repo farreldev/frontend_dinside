@@ -12,11 +12,28 @@
         @include clearit;
         .second-left {
             float: left;
+            @include breakpoint(mobile) {
+                a {
+                    position: absolute;
+                    top: 11px;
+                    left: 15px;
+                    z-index: 2;
+                    img {
+                        width: 10em;
+                    }
+                }
+            }
             time {
                 padding: 23px 0 0;
                 margin-left: 80px;
                 display: inline-block;
                 vertical-align: middle;
+                @include breakpoint(mobile) {
+                    position: absolute;
+                    top: 50px;
+                    left: 15px;
+                    margin-left: 0;
+                }
             }
         }
         .second-right {

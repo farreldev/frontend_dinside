@@ -4,6 +4,10 @@
     h5 {
         display: inline-block;
         margin-right: 18px;
+        @include breakpoint(mobile) {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
     }
     ul {
         margin: 0;
@@ -17,7 +21,6 @@
             border-right: 1px solid $abu;
             color: $abu;
             @include breakpoint(mobile) {
-                padding: 0 10px;
                 font-size: 10px;
             }
             a {
@@ -33,6 +36,9 @@
 .author {
     position: relative;
     top: 60px;
+    @include breakpoint(mobile) {
+        top: 30px;
+    }
 }
 .sub-head-right {
     position: relative;
