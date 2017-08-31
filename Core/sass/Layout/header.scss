@@ -28,6 +28,7 @@
                 cursor: pointer;
                 @include breakpoint(mobile) {
                     position: absolute;
+                    margin-right: 0;
                     top: 15px;
                     right: 0;
                 }
@@ -110,8 +111,7 @@
             }
             @include breakpoint(small-mobile) {
                 position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+                left: 15px;
             }
             img {
                 width: 156px;

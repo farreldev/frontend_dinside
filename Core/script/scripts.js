@@ -7,6 +7,7 @@
             $isHome = $siteContainer.find('div').hasClass('homepage'),
             $isPageSeacrh = $siteContainer.find('div').hasClass('info-search-results'),
             $isSubHead = $siteContainer.find('div').hasClass('.sub-head-child-pages'),
+            
             $subHead =  $siteContainer.find('.sub-head-child-pages');
             
             ($isHome) ? $('.top-center').hide() : $('.top-center').show();
@@ -31,8 +32,8 @@
                 } else {
                     $('.inputSearch').toggleClass('searchOpen');
                 }
-                            
-
+                
+            
                 if($isPageSeacrh) {
                     $('.info-search-results').siblings('.sub-head-child-pages')
                     .animate({
@@ -63,5 +64,20 @@
                 
             })
     })();
-    
-})(jQuery);
+
+    samaTinggi();
+
+    function samaTinggi() {
+        $('.tabel-paket').each(function() {
+            var tinggiKtk = 0;
+            
+            $(this).find('.paket-item').each(function() {
+                if($(this).height() > tinggiKtk ) {
+                    tinggiKtk = $(this).height();
+                }
+            })
+            $(this).find('.paket-item').height(tinggiKtk);
+        });
+    };
+
+})(jQuery)

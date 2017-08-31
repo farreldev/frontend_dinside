@@ -1,0 +1,186 @@
+@import "bourbon";
+
+/* ABSTRACTS */
+@import
+	'../Abstracts/variables',
+	'../Abstracts/functions',
+    '../Abstracts/mixins'; 
+    
+.subscribes-page {
+    .banner-subscribe {
+        position: relative;
+        background-image: url('../../images/banner-subscribe.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 289px;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: rgba(0,0,0,.5);
+        }
+        .banner-title {
+            position: absolute;
+            background: rgba(255,255,255,.71);
+            width: 877px;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            @include breakpoint(mobile) {
+                width: 80%;
+            }
+            h2{
+                position: relative;
+                top: -5px;
+                font-family: "adelle_sansregular";
+                font-size: 34px;
+                padding: 30px 12px;
+                line-height: 1.4em;
+                @include breakpoint(mobile) {
+                    padding: 20px 10px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .subscribe-steps {
+        padding: 59px 0 46px;
+        .subscribe-breadcrumb {
+            width: 100%;
+            li {
+                position: relative;
+                font-family: "adelle_sansregular";
+                font-size: 22px;
+                text-align: center;
+                display: inline-block;
+                width: calc(100% / 3);
+                background: #aaaaaa;
+                color: white;
+                padding: 20px 0;
+                @include breakpoint(mobile) {
+                    font-size: 1em;
+                    &:not(.stepIn) {
+                        display: none;
+                    }
+                }
+                &:nth-child(1) {
+                    z-index: 2;
+                }
+                &:nth-child(2) {
+                    z-index: 1;
+                }
+                &:nth-child(3) {
+                    z-index: 0;
+                }
+                &.stepIn {
+                    background: #636363;
+                    @include breakpoint(mobile) {
+                        width: 96%;
+                    }
+                    &:after {
+                        background: #636363;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    height: 40px;
+                    width: 40px;
+                    top: 11px;
+                    right: -20px;
+                    bottom: 0;
+                    transform: scale(.84) rotate(45deg) skew(18deg,18deg);
+                    background: #aaaaaa;
+                    box-shadow: 7px -7px 10px -1px rgba(0,0,0,.25);
+                    z-index: 2;
+                    @include breakpoint(mobile) {
+                        top: 7px;
+                        transform: scale(.72) rotate(45deg) skew(18deg,18deg);
+                    }
+                }
+            }
+        }
+        .tabel-paket {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            .paket-item {
+                position: relative;
+                padding: 35px 35px;
+                border-top: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-bottom: 1px solid #c2c2c2;             
+                &:first-child {
+                    border-left: 1px solid #c2c2c2;
+                }
+                h3 {
+                    font-family: "adelle_sansregular";
+                    font-size: 24px;
+                    z-index: 2;
+                }
+                h4 {
+                    font-family: "adelle_sansbold";
+                    font-size: 23px;
+                    margin-bottom: 12px;
+                    color: $orange;
+                    z-index: 2;
+                    small {
+                        font-family: "adelle_sanslight";
+                        font-size: 17px;
+                        color: $hitam;
+                    }
+                }
+                ul {
+                    text-align: left;
+                    margin-top: 28px;
+                    margin-left: 10px;
+                    li {
+                        font-size: 16px;
+                        line-height: 1.6em;
+                        color: #666666;
+                        list-style-image: url('../../images/icons/ceklist.png');
+                    }
+                }
+                h3, h4, small, a, ul {
+                    position: relative;
+                    z-index: 2;
+                }
+                &.special {
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        top: -25px;
+                        left: 0;
+                        width: 100%;
+                        height: 110%;
+                        background: white;
+                        box-shadow: 0 0 25px rgba(0,0,0,.35);
+                        border: 5px solid $orange;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+        .faq {
+            padding: 30px 15px;
+            border-top: 1px solid #dddddd;
+            h3 {
+                font-family: "adelle_sansbold";
+                font-size: 24px;
+            }
+            dt {
+                font-family: "adelle_sansbold";
+                font-size: 18px;
+                margin-bottom: 22px;
+            }
+            dd {
+                font-size: 18px;
+                line-height: 1.4em;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
