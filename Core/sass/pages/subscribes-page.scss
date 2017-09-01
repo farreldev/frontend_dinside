@@ -111,7 +111,11 @@
                 padding: 35px 35px;
                 border-top: 1px solid #c2c2c2;
                 border-right: 1px solid #c2c2c2;
-                border-bottom: 1px solid #c2c2c2;             
+                border-bottom: 1px solid #c2c2c2;
+                @include breakpoint(mobile) {
+                    border-left: 1px solid #c2c2c2;
+                    margin-bottom: 30px;
+                }             
                 &:first-child {
                     border-left: 1px solid #c2c2c2;
                 }
@@ -160,6 +164,10 @@
                         box-shadow: 0 0 25px rgba(0,0,0,.35);
                         border: 5px solid $orange;
                         z-index: 1;
+                        @include breakpoint(mobile) {
+                            top: 0;
+                            height: 100%;
+                        }
                     }
                 }
             }
@@ -180,6 +188,34 @@
                 font-size: 18px;
                 line-height: 1.4em;
                 margin-bottom: 30px;
+            }
+        }
+        .notifikasi {
+            margin: 70px auto 0;
+            padding: 40px 48px;
+            width: 555px;
+            @include breakpoint(mobile) {
+                padding: 20px 25px;
+                width: auto;
+            }
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,.35);
+            p {
+                font-family: "adelle_sansregular";
+                font-size: 18px;
+                line-height: 1.4em;
+                @include breakpoint(mobile) {
+                    font-size: 15px;
+                }
+                &.lead {
+                    width: 400px;
+                    margin: 0 auto 25px;
+                    font-size: 24px;
+                    @include breakpoint(mobile) {
+                        width: auto;
+                        margin: 0 auto 20px;
+                    }
+                }
             }
         }
     }

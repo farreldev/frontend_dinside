@@ -63,21 +63,23 @@
                 $('#txtSearch').val('').next().hide();
                 
             })
-    })();
 
-    samaTinggi();
-
-    function samaTinggi() {
-        $('.tabel-paket').each(function() {
-            var tinggiKtk = 0;
+            function samaTinggi(parentBox, elBox) {
+                $(parentBox).each(function() {
+                    var tinggiKtk = 0;
+                    
+                    $(this).find(elBox).each(function() {
+                        if($(this).height() > tinggiKtk ) {
+                            tinggiKtk = $(this).height();
+                        }
+                    })
+                    $(this).find(elBox).height(tinggiKtk);
+                });
+            };
             
-            $(this).find('.paket-item').each(function() {
-                if($(this).height() > tinggiKtk ) {
-                    tinggiKtk = $(this).height();
-                }
-            })
-            $(this).find('.paket-item').height(tinggiKtk);
-        });
-    };
+            samaTinggi('.tabel-paket', '.paket-item');
+            samaTinggi('.artikel-terkait', '.item');
+            
+    })();
 
 })(jQuery)

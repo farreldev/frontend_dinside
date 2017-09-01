@@ -20,6 +20,9 @@
         .title-headline {
             h1 {
                 font-size: 2.8em;
+                a {
+                    color: $hitam;
+                }
             }
             p {
                 margin-bottom: 30px;
