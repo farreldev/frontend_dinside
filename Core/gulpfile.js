@@ -39,6 +39,7 @@ var paths = {
                     //path.join(__dirname, "bower_components/jcf/dist/css/demo.css"),
                     path.join(__dirname, "bower_components/slick-carousel/slick/slick.css"),
                     path.join(__dirname, "bower_components/slick-carousel/slick/slick-theme.css"),
+                    path.join(__dirname, "bower_components/animate_css/animate.css"),
 
                     // FONT AWESOME CSS
                     path.join(__dirname, "bower_components/font-awesome/css/font-awesome.css"),

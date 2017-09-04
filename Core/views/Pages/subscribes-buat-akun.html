@@ -1,0 +1,116 @@
+@@include('../Shared/header.html', {
+    "style": [
+        "assets/css/Pages/subscribes-page.css"
+    ]
+})
+
+<div class="subscribes-page">
+    <section class="subscribe-steps">
+        <div class="container">
+            @@include('../Shared/buat-akun.html')
+            <div class="row form-register">
+
+               <div class="col-md-6">
+                   <div class="box-left">
+                       <div class="box-header">
+                           <h3>Buat Akun</h3>
+                           <span>Sudah punya akun? <a href="#">Sign In</strong></a>
+                       </div>
+                       <div class="box-content">
+                            <ul>
+                                <li><a href="">Google <img src="assets/images/icons/google.png" alt=""></a></li>
+                                <li><a href="">Linkedin <img src="assets/images/icons/linkedin.png" alt=""></a></li>
+                                <li><a href="">Twitter <img src="assets/images/icons/twitter.png" alt=""></a></li>
+                            </ul>
+                            <h6><span>Atau</span></h6>
+                            <form class="form-horizontal custom-form">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                    <input type="email" class="form-control" id="txtEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-2 col-xs-4">
+                                        <select name="" id="" class="form-control">
+                                            <option value="Tn">Tn</option>
+                                            <option value="Ny">Ny</option>
+                                            <option value="..">..</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-10 col-xs-8 no-padding-left">
+                                        <input type="text" class="form-control" id="txtNama" placeholder="Nama Lengkap">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" id="txtPassword" placeholder="Ketik Password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" id="txtPasswordUlangi" placeholder="Ulangi Password">
+                                    </div>
+                                </div>
+                            </form>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col-md-6">
+                   <div class="box-right">
+                        <div class="box-header">
+                            <h3>Rincian Order</h3>
+                        </div>
+                        <div class="box-content">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th><th>Pillihan Paket</th><th>Harga</th><th>Durasi</th><th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th><td>Basic</td><td>Rp500.000</td>
+                                            <td>
+                                                <select name="" id="duration-subscribes" class="duration-subscribes">
+                                                    <option value="">3 Bulan</option>
+                                                    <option value="">2 Bulan</option>
+                                                    <option value="">1 Bulan</option>
+                                                </select>
+                                            </td>
+                                            <td>Rp1.500.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"></td><td><b>PPN</b></td><td>Included</td> 
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"></td><td><b>TOTAL</b></td><td>Rp1.500.000</td> 
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row note-footer">
+                                <div class="col-md-4">
+                                    <form class="form-horizontal custom-form">
+                                        <input type="text" class="form-control" placeholder="Kode voucher"></td><td colspan="3" class="padding-top-2">
+                                    </form>
+                                </div>
+                                <div class="col-md-8 no-padding-left">
+                                        Masukkan kode voucher untuk mendapatkan potongan harga atau bonus langganan
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="check_terms">
+                        <input type="checkbox" value=""> Saya sudah membaca Terms and Conditions
+                    </div>
+                    <button class="btn btn-abu-gelap">Kembali</button>
+                    <button class="btn btn-orange pull-right">Daftar</button>
+               </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@@include('../Shared/footer.html')

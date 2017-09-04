@@ -2,6 +2,10 @@ h1 {
     font-family: "adelle_sansbold";
     font-size: 57px;
     padding: 15px 0;
+    @include breakpoint(mobile) {
+        font-size: 2.5em;
+        line-height: 1.3em;
+    }
     a {
         color: white;
         &:hover {

@@ -64,6 +64,7 @@
                 
             })
 
+
             function samaTinggi(parentBox, elBox) {
                 $(parentBox).each(function() {
                     var tinggiKtk = 0;
