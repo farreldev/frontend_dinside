@@ -18,6 +18,10 @@
                     top: 11px;
                     left: 15px;
                     z-index: 2;
+                    @include breakpoint(mobile) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                     img {
                         width: 10em;
                     }

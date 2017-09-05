@@ -12,12 +12,67 @@
     bottom: 0;
     background: rgba(26,54,102,.95);
     z-index: 3;
+    .link-user-access {
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .35);
+        // background: #BDCEE3;
+        padding: 20px 35px;
+        a.btn {
+            font-family: "adelle_sanssemibold";
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 7px 25px;
+            border-radius: 3px;
+        }
+        .multi-lang {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+            a {
+                display: inline-block;
+                padding: 6px 8px;
+                font-family: "adelle_sanssemibold";
+                font-size: 10.42px;
+                text-transform: uppercase;
+                background: $abu-mid;
+                color: white;
+                &.select-lang {
+                    background: $abu-gelap;
+                }
+            }
+        }
+    }
+    .go-subscribe {
+        margin: 30px 40px 0 35px;
+        padding: 15px;
+        font-family: "adelle_sanssemibold";
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 30px;
+        background: rgba(0,0,0,.15);
+        color: white;
+        transition: all .5s ease;
+        &:hover {
+            border-color: $biru;
+            background: $biru;
+            text-decoration: none;
+        }
+    }
     ul {
         position: relative;
         padding: 30px 0 0;
-        height: 100%;
         li {
             position: relative;
+            // text-align: center;
             a {
                 position: relative;
                 padding: 15px 35px;

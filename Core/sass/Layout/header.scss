@@ -30,7 +30,7 @@
                     position: absolute;
                     margin-right: 0;
                     top: 15px;
-                    right: 0;
+                    left: 0;
                 }
                 span {
                     position: absolute;
@@ -61,9 +61,6 @@
                         &:nth-child(2) {
                             opacity: 0;
                             transform: translate(-50px);
-                            @include breakpoint(mobile) {
-                                transform: translate(50px);
-                            }
                         }
 
                         &:nth-child(3) {
@@ -84,7 +81,7 @@
                 @include breakpoint(mobile) {
                     position: absolute;
                     top: 12px;
-                    right: 45px;
+                    right: 0;
                 }
                 margin-left: 35px;
                 a {
@@ -107,11 +104,13 @@
             @include breakpoint(mobile) {
                 position: absolute;
                 top: 11px;
-                left: 15px;
+                // left: 15px;
+                left: 50%;
+                transform: translateX(-50%);
             }
             @include breakpoint(small-mobile) {
-                position: absolute;
-                left: 15px;
+                left: 50%;
+                transform: translateX(-50%);
             }
             img {
                 width: 156px;
