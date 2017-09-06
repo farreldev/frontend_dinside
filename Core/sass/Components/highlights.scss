@@ -33,7 +33,16 @@
       h4 {
         font-family: "adelle_sanssemibold";
         a {
+          position: relative;
+          top: -2px;
           font-size: 24px;
+          @include breakpoint(mobile) {
+            position: static;
+            font-family: "adelle_sanssemibold";
+            font-size: 18px;
+            line-height: 1.5em;
+          }
+          line-height: 1.4em;
           color: white;
           &:hover {
             text-decoration: none;

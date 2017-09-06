@@ -43,6 +43,12 @@
         text-transform: uppercase;
         margin-bottom: 18px;
         img {
+            @include breakpoint(mobile) {
+                width: 120px;
+            }
+            @include breakpoint(small-mobile) {
+                width: 110px;
+            }
             &:first-child {
                 margin-right: 35px;
             }

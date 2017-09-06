@@ -58,9 +58,9 @@
                 }
             })
 
-            $('.inputSearch').on('click', 'a', function(event) {
+            $('.inputSearch').on('click', '.clear-txt', function(event) {
                 event.preventDefault();
-                $('#txtSearch').val('').next().hide();
+                $('#txtSearch').val('').closest('form').next().hide();
                 
             })
 

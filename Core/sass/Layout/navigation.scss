@@ -1,6 +1,7 @@
 .navigasi {
     position: absolute;
     width: 283px;
+    overflow: hidden;
     @include breakpoint(mobile) {
         width: 100%;
         left: -100%;

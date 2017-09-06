@@ -223,11 +223,13 @@
                 }
             }
         }
+        .form-payment,
         .form-register {
             margin-top: 65px;
             > div {
                 margin-bottom: 20px;
                 .box-left,
+                .box-center,
                 .box-right {
                     padding: 20px 15px;
                     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -338,10 +340,39 @@
                             }
                         }
                         .note-footer {
+                            > div {
+                                padding: 0 0;
+                                @include breakpoint(mobile) {
+                                    margin-bottom: 15px;
+                                }
+                            }
                             margin: 0 1px;
+                            @include breakpoint(mobile) {
+                                margin: 0;
+                            }
                             padding-top: 12px;
                             border-top: 1px solid #000000;
+                            @include breakpoint(mobile) {
+                                border-top: none;
+                            }
                         }               
+                    }
+                }
+            }
+        }
+        .form-payment {
+            margin-top: 20px;
+            .box-center {
+                padding: 50px 80px !important;
+                @include breakpoint(mobile) {
+                    padding: 50px 30px 40px !important;
+                }
+                .box-content {
+                    p {
+                        margin-bottom: 2px;
+                        font-size: 15px;
+                        line-height: 1.4em;
+                        color: $hitam;
                     }
                 }
             }

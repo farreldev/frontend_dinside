@@ -65,8 +65,11 @@
       </header>
       <div class="inputSearch">
         <div class="container">
-          <input type="text" id="txtSearch" name="" class="txtSearch" placeholder="Ketik dan enter..." />
-          <a href=""><span>x</span></a>  
+          <form action="" method="post" onsubmit="search();return false;">
+            <input type="text" id="txtSearch" name="" class="txtSearch" placeholder="Ketik dan enter..." />
+            <input type="submit" style="display:none;">
+	        </form>
+          <a href="" class="clear-txt"><span>x</span></a>  
         </div>
       </div>
       <nav class="navigasi">

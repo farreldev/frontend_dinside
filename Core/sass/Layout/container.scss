@@ -60,6 +60,10 @@
             top: 28px;
             font-family: "adelle_sansextrabold";
             font-size: 46px;
+            @include breakpoint(mobile) {
+                top: 35px;
+                font-size: 35px;
+            }
             text-transform: uppercase;
             color: $orange;
         }
