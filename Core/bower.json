@@ -1,0 +1,26 @@
+{
+  "name": "Dinside",
+  "description": "Katadata",
+  "main": "index.js",
+  "authors": [
+    "Ricky"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Katadata",
+    "Frontend"
+  ],
+  "homepage": "https://github.com/farreldev/frontend_dinside",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.6.0",
+    "jquery": "^2.2.4"
+  }
+}

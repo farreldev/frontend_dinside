@@ -138,12 +138,21 @@
                     display: inline-block;
                     padding: 6px 8px;
                     font-family: "adelle_sanssemibold";
-                    font-size: 10.42px;
+                    font-size: 14px;
                     text-transform: uppercase;
-                    background: $abu-mid;
-                    color: white;
+                    border: 1px solid #aaaaaa;
+                    background: white;
+                    color: $hitam;
+                    &:first-child {
+                        border-right: none;
+                    }
+                    &:last-child {
+                        border-left: none;
+                    }
                     &.select-lang {
-                        background: $abu-gelap;
+                        background: $orange;
+                        border: 1px solid $orange;
+                        color: white;
                     }
                 }
             }
