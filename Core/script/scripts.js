@@ -8,30 +8,7 @@
             $isPageSeacrh = $siteContainer.find('div').hasClass('info-search-results'),
             $isSubHead = $siteContainer.find('div').hasClass('.sub-head-child-pages'),
             
-            $subHead =  $siteContainer.find('.sub-head-child-pages'),
-            
-            word_list = [
-                {text: "Bumn", weight: 72, link: "https://facebook.github.io/react/"},
-                {text: "Beras", weight: 48, link: "https://facebook.github.io/react/"},
-                {text: "Daya Beli", weight: 24, link: "https://facebook.github.io/react/"},
-                {text: "Reshuffle", weight: 58,link: "https://facebook.github.io/react/"},
-                {text: "Pertumbuhan Ekonomi", weight: 38, link: "https://facebook.github.io/react/"},
-                {text: "Fintech", weight: 35, link: "https://facebook.github.io/react/"},
-                {text: "Maritim", weight: 55, link: "https://facebook.github.io/react/"},
-                {text: "Bisnis", weight: 55, link: "https://facebook.github.io/react/"},
-                {text: "Infrastruktur", weight: 30, link: "https://facebook.github.io/react/"},
-                {text: "Pertambangan", weight: 38, link: "https://facebook.github.io/react/"},
-                {text: "Analisis", weight: 25, link: "https://facebook.github.io/react/"},
-                {text: "Bursa", weight: 72, link: "https://facebook.github.io/react/"},
-                {text: "Migas", weight: 50, link: "https://facebook.github.io/react/"},
-                {text: "CPO", weight: 36, link: "https://facebook.github.io/react/"},
-                {text: "Finansial", weight: 44, link: "https://facebook.github.io/react/"},
-                {text: "Bursa", weight: 40, link: "https://facebook.github.io/react/"},
-                {text: "Daya Beli", weight: 48, link: "https://facebook.github.io/react/"},
-                {text: "UKM", weight: 45, link: "https://facebook.github.io/react/"},
-            ];
-
-            $("#txtCloud").jQCloud(word_list);
+            $subHead =  $siteContainer.find('.sub-head-child-pages');
 
             ($isHome) ? $('.top-center').hide() : $('.top-center').show();
             ($isPageSeacrh) ? $subHead.css({marginTop: '-83px'}) : '';
@@ -84,7 +61,6 @@
             $('.inputSearch').on('click', '.clear-txt', function(event) {
                 event.preventDefault();
                 $('#txtSearch').val('').closest('form').next().hide();
-                
             })
 
 
@@ -100,15 +76,30 @@
                     $(this).find(elBox).height(tinggiKtk);
                 });
             };
-
-            jQuery('#startDate, #endDate, #highlightDate').datetimepicker();
             
             $(window).on('load', function() {
                 samaTinggi('.tabel-paket', '.paket-item');
                 samaTinggi('.artikel-terkait', '.item');
             })
 
-            
+            $('a.signIn').on('click', function(e) {
+                e.preventDefault();
+                $('div.overlay-box').fadeIn(200);
+                setTimeout(function(){
+                    $('div.signin-modal').removeClass('animated zoomOut');
+                    $('div.signin-modal').toggleClass('animated zoomIn').css('display', 'block');
+                }, 300);
+                
+            })
+
+            $('div.overlay-box').on('click', function() {
+                $('div.signin-modal').removeClass('animated zoomIn');
+                $('div.signin-modal').toggleClass('animated zoomOut');
+                setTimeout(function(){
+                    $('div.overlay-box').fadeOut(200);
+                    $('div.signin-modal').css({display: 'none'});
+                }, 300);
+            })
     })();
 
 })(jQuery)
