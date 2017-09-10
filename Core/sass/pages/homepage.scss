@@ -12,10 +12,16 @@
 		@include breakpoint(mobile) {
 			height: auto;
 		}
+		@include breakpoint(tablet) {
+			height: auto;
+		}
 		img {
 			width: 100%;
 			height: 452px;
 			@include breakpoint(mobile) {
+				height: auto;
+			}
+			@include breakpoint(tablet) {
 				height: auto;
 			}
 		}
@@ -25,6 +31,9 @@
 			@include breakpoint(mobile) {
 				height: auto;
 			} 
+			@include breakpoint(tablet) {
+				height: auto;
+			}
 			background: $hitam;
 			color: white;
 			article {

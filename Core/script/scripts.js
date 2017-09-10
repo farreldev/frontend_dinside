@@ -82,6 +82,16 @@
                 samaTinggi('.artikel-terkait', '.item');
             })
 
+            var $ai = $('section.headlines-article').find('div.article-info').children('article'),
+                $hSatu = $ai.find('h1'),
+                $par = $ai.find('p'),
+
+                $pText = $par.text(),
+                $jmlStr = $hSatu.text().length,
+                $replaceStr = $par.text().substring(0, 170);
+
+                ($jmlStr >= 50) ? $par.text($replaceStr+'..') : $pText ;
+                
             $('a.signIn').on('click', function(e) {
                 e.preventDefault();
                 $('div.overlay-box').fadeIn(200);

@@ -195,10 +195,12 @@
                 margin-bottom: 30px;
             }
         }
+        .not-found,
         .notifikasi {
             margin: 70px auto 0;
             padding: 40px 48px;
             width: 555px;
+            height: auto;
             @include breakpoint(mobile) {
                 padding: 20px 25px;
                 width: auto;
@@ -222,6 +224,42 @@
                     }
                 }
             }
+        }
+        .not-found {
+            margin: 5px auto 20px;
+            padding: 20px 25px 50px;
+            p {
+                &.lead {
+                    width: auto;
+                    margin-bottom: 10px;
+                }
+            }
+            strong {
+                margin-bottom: 35px;
+                font-family: "adelle_sansextrabold";
+                font-size: 170px;
+                display: block;
+                @include breakpoint(mobile) {
+                    font-size: 9em;
+                }
+                @include breakpoint(small-mobile) {
+                    font-size: 7em;
+                }
+            }
+            a {
+                font-family: "adelle_sansregular";
+                font-size: 15px;
+                padding: 10px 20px;
+                border: 2px solid $orange;
+                text-decoration: none;
+                border-radius: 30px;
+                color: $orange;
+                &:hover {
+                    background: $orange;
+                    border-color: $orange;
+                    color: white;
+                }
+            }            
         }
         .form-payment,
         .form-register {
@@ -340,10 +378,16 @@
                             }
                         }
                         .note-footer {
+                            line-height: 1.21em;
                             > div {
-                                padding: 0 0;
+                                padding: 0 15px 0 0;
                                 @include breakpoint(mobile) {
                                     margin-bottom: 15px;
+                                    padding: 0 0;
+                                }
+                                @include breakpoint(tablet) {
+                                    margin-bottom: 15px;
+                                    padding: 0 0;
                                 }
                             }
                             margin: 0 1px;
