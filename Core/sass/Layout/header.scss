@@ -1,5 +1,7 @@
 .site-header {
+    position: fixed;
     width: 100%;
+    z-index: 3;
     .top-header {
         position: relative;
         text-align: center;
@@ -163,7 +165,7 @@
                 display: inline-block;
                 vertical-align: middle;
                 color: $hitam;
-                
+
             }
             a.btn {
                 font-family: "adelle_sanslight";
@@ -264,5 +266,5 @@
     // }
     &.searchOpen {
         top: 55px;
-    } 
+    }
 }

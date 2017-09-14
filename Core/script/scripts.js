@@ -3,18 +3,34 @@
 
   var app = (function() {
 
-    var $siteContainer = $('.site-container'),
+    var $siteContainer = $('main.site-container'),
+      $siteHeader = $('header.site-header'),
       $isHome = $siteContainer.find('div').hasClass('homepage'),
       $isPageSeacrh = $siteContainer.find('div').hasClass('info-search-results'),
       $isSubHead = $siteContainer.find('div').hasClass('.sub-head-child-pages'),
       $subHead = $siteContainer.find('.sub-head-child-pages'),
-      winWidth = window.innerWidth,
-      winHeight = window.innerHeight;
+      $windw = $(window),
+      $winWidth = $windw.innerWidth,
+      $winHeight = $windw.innerHeight;
 
     ($isHome) ? $('.top-center').hide(): $('.top-center').show();
     ($isPageSeacrh) ? $subHead.css({
       marginTop: '-83px'
     }): '';
+
+    $windw.on('scroll', function() {
+
+      // if($windw.scrollTop() >= 55) {
+      //   $siteContainer.css('marginTop', '55px');
+      //   $siteHeader.css({
+      //     position: 'fixed',
+      //     top: 0,
+      //     zIndex: 3
+      //   });
+      // }
+
+
+    });
 
     $('.humburger-btn').on('click', function() {
       if ($('.inputSearch').hasClass('searchOpen')) {
@@ -80,10 +96,8 @@
       });
     };
 
-    $(window).on('load', function() {
       samaTinggi('.tabel-paket', '.paket-item');
       samaTinggi('.artikel-terkait', '.item');
-    })
 
     var $ai = $('section.headlines-article').find('div.article-info').children('article'),
       $hSatu = $ai.find('h1'),

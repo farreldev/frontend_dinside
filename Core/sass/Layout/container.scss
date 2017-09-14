@@ -4,6 +4,7 @@
 }
 
 .site-container {
+    margin-top: 55px;
     width: 100%;
     // padding: 20px 0;
     min-height: calc(100% - 250px);
@@ -55,7 +56,7 @@
         position: relative;
         @include clearit;
         height: 83px;
-        border-bottom: 1px solid #aaaaaa; 
+        border-bottom: 1px solid #aaaaaa;
         h2 {
             position: relative;
             top: 28px;
