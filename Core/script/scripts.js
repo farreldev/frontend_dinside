@@ -20,16 +20,15 @@
 
     $windw.on('scroll', function() {
 
-      // if($windw.scrollTop() >= 55) {
-      //   $siteContainer.css('marginTop', '55px');
-      //   $siteHeader.css({
-      //     position: 'fixed',
-      //     top: 0,
-      //     zIndex: 3
-      //   });
-      // }
-
-
+      if($windw.scrollTop() > 55) {
+        $siteContainer.css('marginTop', '55px');
+        $siteHeader.css({
+          position: 'fixed',
+          top: 0,
+          zIndex: 3
+        });
+      }
+      
     });
 
     $('.humburger-btn').on('click', function() {

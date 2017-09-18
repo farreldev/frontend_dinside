@@ -118,5 +118,24 @@
     }
     &.mnuOpen {
         left: 0;
+        &:after {
+            opacity: 1;
+            transform: scaleX(1);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &:after {
+        position: fixed;
+        content: '';
+        top: 55px;
+        right: 0;
+        bottom: 0;
+        left: 283px;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        transform-origin: right;
+        transform: scaleX(0);
+        background: rgba(0,0,0,.55);
+        cursor: pointer;
     }
 }
