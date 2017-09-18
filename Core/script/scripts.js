@@ -28,7 +28,7 @@
           zIndex: 3
         });
       }
-      
+
     });
 
     $('.humburger-btn').on('click', function() {
@@ -37,6 +37,7 @@
         $('.navigasi').toggleClass('mnuOpen');
         $('.inputSearch').removeClass('searchOpen');
       } else {
+        $('.navOverlay').fadeOut();
         $(this).toggleClass('humTrigger');
         $('.navigasi').toggleClass('mnuOpen');
       }
