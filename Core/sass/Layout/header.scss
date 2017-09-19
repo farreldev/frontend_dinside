@@ -1,7 +1,7 @@
 .site-header {
-    position: relative;
+    position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
     .top-header {
         position: relative;
         text-align: center;
@@ -115,7 +115,8 @@
                 transform: translateX(-50%);
             }
             img {
-                width: 156px;
+                // width: 156px;
+                width: 10em;
                 @include breakpoint(mobile) {
                     width: 10em;
                 }
@@ -179,7 +180,8 @@
 }
 
 .inputSearch {
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     top: -110px;
     width: 100%;
     height: 110px;
@@ -188,7 +190,7 @@
     }
     transition: top .5s ease-in-out;
     background: white;
-    z-index: 1;
+    z-index: 3;
     > div {
         position: relative;
         height: 110px;
@@ -266,5 +268,15 @@
     // }
     &.searchOpen {
         top: 55px;
+        // &:after {
+        //     position: inherit;
+        //     content: '';
+        //     top: 165px;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     transition: background .3s ease-in-out;
+        //     background: rgba(0,0,0,.5);
+        // }
     }
 }

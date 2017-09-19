@@ -124,11 +124,11 @@
 .navOverlay {
     position: fixed;
     content: '';
-    top: 55px;
     display: none;
-    right: 0;
-    bottom: 0;
-    left: 283px;
+    // top: 55px;
+    // right: 0;
+    // bottom: 0;
+    // left: 283px;
     background: rgba(0,0,0,.75);
     cursor: pointer;
     z-index: 3;
