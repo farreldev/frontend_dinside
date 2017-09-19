@@ -188,7 +188,7 @@
     @include breakpoint(mobile) {
         height: 85px;
     }
-    transition: top .5s ease-in-out;
+    transition: top .3s ease-in-out;
     background: white;
     z-index: 3;
     > div {

@@ -6,8 +6,9 @@
     @include breakpoint(mobile) {
         width: 100%;
         left: -100%;
+        overflow-y: auto;
     }
-    height: 100%;
+    height: auto;
     left:-283px;
     transition: left .3s ease-in-out;
     top: 55px;
@@ -77,10 +78,13 @@
             background: $orange;
             text-decoration: none;
         }
+        @include breakpoint(mobile) {
+            margin-bottom: 30px;
+        }
     }
     ul {
         position: relative;
-        padding: 30px 0 0;
+        padding: 20px 0 0;
         li {
             position: relative;
             // text-align: center;
@@ -129,7 +133,7 @@
     // right: 0;
     // bottom: 0;
     // left: 283px;
-    background: rgba(0,0,0,.75);
+    background: rgba(0,0,0,.55);
     cursor: pointer;
     z-index: 3;
     @include breakpoint(mobile) {
