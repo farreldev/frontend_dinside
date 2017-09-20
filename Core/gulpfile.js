@@ -39,8 +39,8 @@ var paths = {
                     //path.join(__dirname, "bower_components/jcf/dist/css/demo.css"),
                     path.join(__dirname, "bower_components/jQCloud/jqcloud/jqcloud.css"),
                     path.join(__dirname, "bower_components/datetimepicker/build/jquery.datetimepicker.min.css"),
-                    path.join(__dirname, "bower_components/slick-carousel/slick/slick.css"),
-                    path.join(__dirname, "bower_components/slick-carousel/slick/slick-theme.css"),
+                    // path.join(__dirname, "bower_components/slick-carousel/slick/slick.css"),
+                    // path.join(__dirname, "bower_components/slick-carousel/slick/slick-theme.css"),
                     path.join(__dirname, "bower_components/animate_css/animate.css"),
 
                     // FONT AWESOME CSS
@@ -66,7 +66,7 @@ var paths = {
                     // path.join(__dirname, "bower_components/jcf/dist/js/jcf.select.js"),
                     path.join(__dirname, "bower_components/jQCloud/jqcloud/jqcloud-1.0.3.min.js"),
                     path.join(__dirname, "bower_components/datetimepicker/build/jquery.datetimepicker.full.min.js"),
-                    path.join(__dirname, "bower_components/slick-carousel/slick/slick.min.js"),
+                    // path.join(__dirname, "bower_components/slick-carousel/slick/slick.min.js"),
 
                     path.join(__dirname, "plugins/**/*.js"),
                 ],
