@@ -48,14 +48,12 @@
         $('div.navOverlay').fadeOut(300);
         if(window.innerWidth > 768 ) {
           $('div.navOverlay').css({
-            top: '55px',
             right: 0,
             bottom: 0,
             left: '283px'
           });
         } else {
           $('div.navOverlay').css({
-            top: '55px',
             right: 0,
             bottom: 0,
             left: '100%'
@@ -86,31 +84,22 @@
         $('div.humburger-btn').removeClass('humTrigger');
         $('div.inputSearch').toggleClass('searchOpen');
         $('div.navOverlay').fadeOut(300);
-
-        if(window.innerWidth > 768) {
-          $('div.navOverlay').css({
-            top: '165px',
-            right: 0,
-            bottom: 0,
-            left: 0
-          });
-        } else {
-          $('div.navOverlay').css({
-            top: '140px',
-            right: 0,
-            bottom: 0,
-            left: 0
-          });
-        }
-
+        $('div.navOverlay').css({
+          top: '55px',
+          right: 0,
+          bottom: 0,
+          left: 0,
+          zIndex: 2
+        });
         $('div.navOverlay').fadeIn(300);
       } else {
         $('div.navOverlay').fadeIn(300);
         $('div.navOverlay').css({
-          top: '140px',
+          top: '55px',
           right: 0,
           bottom: 0,
-          left: 0
+          left: 0,
+          zIndex: 2
         });
         $('div.inputSearch').toggleClass('searchOpen');
         if(!$('div.inputSearch').hasClass('searchOpen')) {
