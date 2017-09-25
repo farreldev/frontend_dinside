@@ -161,7 +161,7 @@
       $jmlStr = $hSatu.text().length,
       $replaceStr = $pText.substring(0, 170);
 
-    ($jmlStr >= 50) ? $par.text($replaceStr + '..') : $pText;
+    ($jmlStr >= 56) ? $par.text($replaceStr + '..') : $pText;
 
     $('a.signIn').on('click', function(e) {
       e.preventDefault();
