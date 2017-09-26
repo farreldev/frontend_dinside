@@ -11,6 +11,9 @@
       $subHead = $siteContainer.find('.sub-head-child-pages'),
       $windw = $(window),
       $winWidth = $windw.innerWidth,
+      $frmLogin = $('.box-content').children('.frmLogin'),
+      $frmLupa = $('.box-content').children('.frmLupaPassword'),
+      $headCaption = $('.box-content').siblings('.box-header'),
       $winHeight = $windw.innerHeight;
 
     ($isHome) ? $('.top-center').hide() : $('.top-center').show();
@@ -156,13 +159,35 @@
     var $ai = $('section.headlines-article').find('div.article-info').children('article'),
       $hSatu = $ai.find('h1'),
       $par = $ai.find('p'),
-
       $pText = $par.text(),
       $jmlStr = $hSatu.text().length,
       $replaceStr = $pText.substring(0, 170);
 
-    ($jmlStr >= 56) ? $par.text($replaceStr + '..') : $pText;
+    if($jmlStr >= 65) {
+      $par.text($replaceStr + '..');
+    } else {
+      $pText;
+    }
 
+    function changePanel(title, currFrm, backFrm) {
+      $headCaption.children('h3').fadeOut(function() {
+        $(this).text(title).fadeIn();
+      });
+      currFrm.fadeOut(function(){
+        backFrm.fadeIn();
+      });
+    }
+
+    $('#lupaPassword').on('click', function(e) {
+      e.preventDefault();
+      changePanel('Reset Password', $frmLogin, $frmLupa);
+    });
+    
+    $('#backLogin').on('click', function(e) {
+      e.preventDefault();
+      changePanel('Login', $frmLupa, $frmLogin);
+    });
+    
     $('a.signIn').on('click', function(e) {
       e.preventDefault();
       $('div.overlay-box').fadeIn(200);

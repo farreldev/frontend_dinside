@@ -63,8 +63,11 @@
             font-family: "adelle_sansextrabold";
             font-size: 46px;
             @include breakpoint(mobile) {
-                top: 35px;
-                font-size: 35px;
+                top: 30px;
+                font-size: 25px;
+            }
+            @include breakpoint(small-mobile) {
+                font-size: 22px;
             }
             text-transform: uppercase;
             color: $orange;

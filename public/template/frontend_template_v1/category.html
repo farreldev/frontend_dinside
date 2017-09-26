@@ -293,6 +293,7 @@
             <span>Belum punya akun? <a href="#">Sign In</a></span>
         </div>
         <div class="box-content">
+          <div class="frmLogin">
             <ul>
                 <li><a href="">Google <img src="assets/images/icons/google.png" alt=""></a></li>
                 <li><a href="">Linkedin <img src="assets/images/icons/linkedin.png" alt=""></a></li>
@@ -313,10 +314,23 @@
                 <div class="text-center rememberMe">
                     <input id="ingatkan" type="checkbox" value="">
                     <label for="ingatkan">Ingatkan saya</label>
-                    <a>Lupa Password?</a>
+                    <a id="lupaPassword">Lupa Password?</a>
                 </div>
                 <button type="submit" class="btn btn-block btn-orange pull-right">Login</button>
             </form>
+          </div>
+          <div class="frmLupaPassword">
+            <p class="text-center">Masukkan alamat e-mail Anda dan kami akan mengirimkan link untuk mereset kata sandi Anda</p>
+            <form class="form-horizontal custom-form">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <input type="email" class="form-control" id="mailResetPass" placeholder="Email">
+                </div>
+              </div>
+              <a href="#" id="backLogin"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali ke Login</a>
+              <button type="submit" class="btn pull-right btn-orange pull-right">Reset Password</button>
+            </form>
+          </div>
         </div>
       </div>
       <div class="overlay-box"></div>
