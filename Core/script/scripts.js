@@ -195,12 +195,16 @@
         $('div.signin-modal').removeClass('animated zoomOut');
         $('div.signin-modal').toggleClass('animated zoomIn').css('display', 'block');
       }, 300);
+      setTimeout(function() {
+        $('div.signin-modal a.closeFrm').addClass('showClose');
+      }, 700);
     });
 
     $('div.overlay-box, .closeFrm').on('click', function(e) {
       e.preventDefault();
       $('div.signin-modal').removeClass('animated zoomIn');
       $('div.signin-modal').toggleClass('animated zoomOut');
+      $('div.signin-modal a.closeFrm').removeClass('showClose');
       setTimeout(function() {
         $('div.overlay-box').fadeOut(200);
         $('div.signin-modal').css({
