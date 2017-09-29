@@ -10,139 +10,162 @@
     padding: 20px 15px;
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    overflow: hidden;
     z-index: 10;
     @include breakpoint(mobile) {
         width: 92%;
     }
-    .box-header {
-        @include clearit;
-        h3 {
-            margin-bottom: 45px;
-            display: inline-block;
-            font-family: "adelle_sansregular";
-            font-size: 24px;
-            @include breakpoint(mobile) {
-                font-size: 18px;
-                margin-bottom: 20px;
-            }
-        }
-        span {
-            font-size: 14px;
-            position: relative;
-            top: 4px;
-            float: right;
-            a {
-                font-family: "adelle_sanssemibold";
-                font-size: 14px;
-                text-transform: uppercase;
-            }
-            @include breakpoint(mobile) {
-                font-size: 12px;
-            }
-        }
-    }
-    .box-content {
-        @include clearit;
-        ul {
+    .frmWrapper {
+        position: relative;
+        .box-header {
             @include clearit;
-            margin-bottom: 22px;
-            @include breakpoint(mobile) {
-                margin-bottom: 13px;
-            }
-            li {
-                float: left;
-                padding: 0 4px;
+            h3 {
+                margin-bottom: 45px;
                 display: inline-block;
-                width: calc(100% / 3);
+                font-family: "adelle_sansregular";
+                font-size: 24px;
                 @include breakpoint(mobile) {
-                    width: 100%;
-                    padding: 0 0 10px;
+                    font-size: 18px;
+                    margin-bottom: 20px;
                 }
+            }
+            span {
+                font-size: 14px;
+                position: relative;
+                top: 4px;
+                float: right;
                 a {
-                    display: block;
+                    font-family: "adelle_sanssemibold";
                     font-size: 14px;
-                    text-decoration: none;
-                    color: $hitam;
-                    border: 1px solid #aaaaaa;
-                    padding: 10px;
-                    img {
-                        position: relative;
-                        top: -5px;
-                        right: -2px;
-                        float: right;
+                    text-transform: uppercase;
+                }
+                @include breakpoint(mobile) {
+                    font-size: 12px;
+                }
+            }
+        }
+        .box-content {
+            @include clearit;
+            ul {
+                @include clearit;
+                margin-bottom: 22px;
+                @include breakpoint(mobile) {
+                    margin-bottom: 13px;
+                }
+                li {
+                    float: left;
+                    padding: 0 4px;
+                    display: inline-block;
+                    width: calc(100% / 3);
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                        padding: 0 0 10px;
+                    }
+                    a {
+                        display: block;
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: $hitam;
+                        border: 1px solid #aaaaaa;
+                        padding: 10px;
+                        img {
+                            position: relative;
+                            top: -5px;
+                            right: -2px;
+                            float: right;
+                        }
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
                     }
                 }
-                &:first-child {
-                    padding-left: 0;
+            }
+            h6 {
+                position: relative;
+                margin-bottom: 22px;
+                display: block;
+                font-family: "adelle_sansbold";
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+                z-index: 2;
+                &:before {
+                    border-top: 1px solid #dddddd;
+                    content:"";
+                    margin: 2px auto 0; 
+                    position: absolute;
+                    top: 50%; left: 0; right: 0; bottom: 0;
+                    transform: translateY(-50%);
+                    z-index: -1;
                 }
-                &:last-child {
-                    padding-right: 0;
+                span { 
+                    background: #fff; 
+                    padding: 0 15px; 
                 }
             }
-        }
-        h6 {
-            position: relative;
-            margin-bottom: 22px;
-            display: block;
-            font-family: "adelle_sansbold";
-            font-size: 12px;
-            text-transform: uppercase;
-            text-align: center;
-            z-index: 2;
-            &:before {
-                border-top: 1px solid #dddddd;
-                content:"";
-                margin: 2px auto 0; 
-                position: absolute;
-                top: 50%; left: 0; right: 0; bottom: 0;
-                transform: translateY(-50%);
-                z-index: -1;
+            .frmLupaPassword {
+                display: none;
+                    p {
+                        font-size: 16px;
+                        line-height: 1.5em;
+                        margin-bottom: 15px;
+                    }
+                    a {
+                        display: inline-block;
+                        margin-top: 10px;
+                    }
             }
-            span { 
-                background: #fff; 
-                padding: 0 15px; 
-            }
-        }
-        .frmLupaPassword {
-            display: none;
-                p {
-                    font-size: 16px;
-                    line-height: 1.5em;
-                    margin-bottom: 15px;
+            .rememberMe {
+                margin-bottom: 15px;
+                width: 100%;
+                display: block;
+                input {
+                    position: relative;
+                    top: 1px;
+                    margin-right: 2px;
+                }
+                label {
+                    position: relative;
+                    font-family: "adelle_sanslight";
+                    font-size: 15px;
+                    color: #999999;
+                    margin-right: 18px;
+                    &:after {
+                        position: absolute;
+                        content: '•';
+                        display: inline-block;
+                        margin: 0 0 0 9px;
+                    }
                 }
                 a {
-                    display: inline-block;
-                    margin-top: 10px;
+                    font-family: "adelle_sansregular";
+                    font-size: 15px;
+                    color: $biru;
+                    cursor: pointer;
                 }
+            }
         }
-        .rememberMe {
-            margin-bottom: 15px;
-            width: 100%;
-            display: block;
-            input {
-                position: relative;
-                top: 1px;
-                margin-right: 2px;
-            }
-            label {
-                position: relative;
-                font-family: "adelle_sanslight";
-                font-size: 15px;
-                color: #999999;
-                margin-right: 18px;
-                &:after {
-                    position: absolute;
-                    content: '•';
-                    display: inline-block;
-                    margin: 0 0 0 9px;
-                }
-            }
-            a {
-                font-family: "adelle_sansregular";
-                font-size: 15px;
-                color: $biru;
-                cursor: pointer;
+        .closeFrm {
+            position: absolute;
+            top: -52px;
+            right: -15px;
+            font-family: "adelle_sansbold";
+            font-size: 13px;
+            text-transform: uppercase;
+            display: inline-block;
+            color: $orange;
+            text-decoration: none;
+            background: white;
+            padding-right: 15px;
+            i {
+                font-size: 16px;
+                padding: 8px 12px;
+                color: white;
+                background: $orange;
+                margin-right: 10px;
+                box-shadow: inset -4px 0 7px rgba(0,0,0,.1);
             }
         }
     }
