@@ -198,7 +198,7 @@
       }, 700);
     });
 
-    $('div.overlay-box, .closeFrm').on('click', function(e) {
+    $('.closeFrm').on('click', function(e) {
       e.preventDefault();
       $('div.signin-modal').removeClass('animated zoomIn');
       $('div.signin-modal').toggleClass('animated zoomOut');
