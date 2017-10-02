@@ -17,9 +17,7 @@
       $winHeight = $windw.innerHeight;
 
     ($isHome) ? $('.top-center').hide() : $('.top-center').show();
-    ($isPageSeacrh) ? $subHead.css({
-      marginTop: '-83px'
-    }): '';
+    ($isPageSeacrh) ? $subHead.css({marginTop: '-83px'}): '';
 
     $windw.on('scroll', function() {
 
