@@ -154,18 +154,18 @@
       samaTinggi('.tabel-paket', '.paket-item');
       samaTinggi('.artikel-terkait', '.item');
 
-    var $ai = $('section.headlines-article').find('div.article-info').children('article'),
-      $hSatu = $ai.find('h1'),
-      $par = $ai.find('p'),
-      $pText = $par.text(),
-      $jmlStr = $hSatu.text().length,
-      $replaceStr = $pText.substring(0, 170);
+    // var $ai = $('section.headlines-article').find('div.article-info').children('article'),
+    //   $hSatu = $ai.find('h1'),
+    //   $par = $ai.find('p'),
+    //   $pText = $par.text(),
+    //   $jmlStr = $hSatu.text().length,
+    //   $replaceStr = $pText.substring(0, 170);
 
-    if($jmlStr >= 65) {
-      $par.text($replaceStr + '..');
-    } else {
-      $pText;
-    }
+    // if($jmlStr >= 65) {
+    //   $par.text($replaceStr + '..');
+    // } else {
+    //   $pText;
+    // }
 
     function changePanel(title, currFrm, backFrm) {
       $headCaption.children('h3').fadeOut(function() {
