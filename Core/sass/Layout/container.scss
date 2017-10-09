@@ -4,8 +4,8 @@
 }
 
 .site-container {
-    margin-top: 55px;
     width: 100%;
+    margin-top: 55px;
     // padding: 20px 0;
     min-height: calc(100% - 250px);
     overflow: hidden;
@@ -16,10 +16,10 @@
             float: left;
             @include breakpoint(mobile) {
                 a {
-                    position: absolute;
+                    position: fixed;
                     top: 11px;
                     left: 15px;
-                    z-index: 2;
+                    z-index: 5;
                     @include breakpoint(mobile) {
                         left: 50%;
                         transform: translateX(-50%);
@@ -63,8 +63,11 @@
             font-family: "adelle_sansextrabold";
             font-size: 46px;
             @include breakpoint(mobile) {
-                top: 35px;
-                font-size: 35px;
+                top: 30px;
+                font-size: 25px;
+            }
+            @include breakpoint(small-mobile) {
+                font-size: 22px;
             }
             text-transform: uppercase;
             color: $orange;

@@ -14,122 +14,176 @@
     @include breakpoint(mobile) {
         width: 92%;
     }
-    .box-header {
-        @include clearit;
-        h3 {
-            margin-bottom: 45px;
-            display: inline-block;
-            font-family: "adelle_sansregular";
-            font-size: 24px;
-            @include breakpoint(mobile) {
-                font-size: 18px;
-                margin-bottom: 20px;
-            }
-        }
-        span {
-            font-size: 14px;
-            position: relative;
-            top: 4px;
-            float: right;
-            a {
-                font-family: "adelle_sanssemibold";
-                font-size: 14px;
-                text-transform: uppercase;
-            }
-            @include breakpoint(mobile) {
-                font-size: 12px;
-            }
-        }
-    }
-    .box-content {
-        @include clearit;
-        ul {
+    .frmWrapper {
+        position: relative;
+        perspective: 3000px;
+        perspective-origin: 50% 50%;
+        -webkit-perspective: 3000px;
+        -webkit-perspective-origin: 50% 50%;
+        -moz-perspective: 3000px;
+        -moz-perspective-origin: 50% 50%;
+        .box-header {
             @include clearit;
-            margin-bottom: 22px;
-            @include breakpoint(mobile) {
-                margin-bottom: 13px;
-            }
-            li {
-                float: left;
-                padding: 0 4px;
-                display: inline-block;
-                width: calc(100% / 3);
+            h3 {
+                margin-bottom: 25px;
+                display: block;
+                text-align: center;
+                font-family: "adelle_sansregular";
+                font-size: 24px;
                 @include breakpoint(mobile) {
-                    width: 100%;
-                    padding: 0 0 10px;
+                    font-size: 18px;
+                    margin-bottom: 20px;
                 }
-                a {
-                    display: block;
-                    font-size: 14px;
-                    text-decoration: none;
-                    color: $hitam;
-                    border: 1px solid #aaaaaa;
-                    padding: 10px;
-                    img {
-                        position: relative;
-                        top: -5px;
-                        right: -2px;
-                        float: right;
+            }
+        }
+        .box-content {
+            @include clearit;
+            ul {
+                @include clearit;
+                margin-bottom: 22px;
+                @include breakpoint(mobile) {
+                    margin-bottom: 13px;
+                }
+                li {
+                    float: left;
+                    padding: 0 4px;
+                    display: inline-block;
+                    width: calc(100% / 3);
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                        padding: 0 0 10px;
+                    }
+                    a {
+                        display: block;
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: $hitam;
+                        border: 1px solid #aaaaaa;
+                        padding: 10px;
+                        img {
+                            position: relative;
+                            top: -5px;
+                            right: -2px;
+                            float: right;
+                        }
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
                     }
                 }
-                &:first-child {
-                    padding-left: 0;
-                }
-                &:last-child {
-                    padding-right: 0;
-                }
             }
-        }
-        h6 {
-            position: relative;
-            margin-bottom: 22px;
-            display: block;
-            font-family: "adelle_sansbold";
-            font-size: 12px;
-            text-transform: uppercase;
-            text-align: center;
-            z-index: 2;
-            &:before {
-                border-top: 1px solid #dddddd;
-                content:"";
-                margin: 2px auto 0; 
-                position: absolute;
-                top: 50%; left: 0; right: 0; bottom: 0;
-                transform: translateY(-50%);
-                z-index: -1;
-            }
-            span { 
-                background: #fff; 
-                padding: 0 15px; 
-            }
-        }
-        .rememberMe {
-            margin-bottom: 15px;
-            width: 100%;
-            display: block;
-            input {
+            h6 {
                 position: relative;
-                top: 1px;
-                margin-right: 2px;
-            }
-            label {
-                position: relative;
-                font-family: "adelle_sanslight";
-                font-size: 15px;
-                color: #999999;
-                margin-right: 18px;
-                &:after {
+                margin-bottom: 22px;
+                display: block;
+                font-family: "adelle_sansbold";
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+                z-index: 2;
+                &:before {
+                    border-top: 1px solid #dddddd;
+                    content:"";
+                    margin: 2px auto 0; 
                     position: absolute;
-                    content: '•';
-                    display: inline-block;
-                    margin: 0 0 0 9px;
+                    top: 50%; left: 0; right: 0; bottom: 0;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                }
+                span { 
+                    background: #fff; 
+                    padding: 0 15px; 
                 }
             }
-            a {
-                font-family: "adelle_sansregular";
-                font-size: 15px;
-                color: $biru;
-                cursor: pointer;
+            .frmLupaPassword {
+                display: none;
+                p {
+                    font-size: 16px;
+                    line-height: 1.5em;
+                    margin-bottom: 15px;
+                }
+                a {
+                    display: inline-block;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                    @include breakpoint(mobile) {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .rememberMe {
+                margin-bottom: 15px;
+                width: 100%;
+                display: block;
+                input {
+                    position: relative;
+                    top: 1px;
+                    margin-right: 2px;
+                }
+                label {
+                    position: relative;
+                    font-family: "adelle_sanslight";
+                    font-size: 15px;
+                    color: #999999;
+                    margin-right: 18px;
+                    &:after {
+                        position: absolute;
+                        content: '•';
+                        display: inline-block;
+                        margin: 0 0 0 9px;
+                    }
+                }
+                a {
+                    font-family: "adelle_sansregular";
+                    font-size: 15px;
+                    color: $biru;
+                    cursor: pointer;
+                }
+            }
+            span.goSubscribe {
+                margin-top: 4px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                a {
+                    margin-bottom: 0;
+                    font-family: "adelle_sanssemibold";
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+                @include breakpoint(mobile) {
+                    font-size: 12px;
+                }
+            }
+        }
+        .closeFrm {
+            position: absolute;
+            top: -52px;
+            right: -15px;
+            font-family: "adelle_sansbold";
+            font-size: 13px;
+            text-transform: uppercase;
+            display: none;
+            color: $orange;
+            text-decoration: none;
+            background: white;
+            padding-right: 15px;
+            i {
+                font-size: 16px;
+                padding: 8px 12px;
+                color: white;
+                background: $orange;
+                margin-right: 10px;
+                box-shadow: inset -4px 0 7px rgba(0,0,0,.1);
+            }
+            &.showClose {
+                display: inline-block;
+                animation: in .5s ease-in-out;
+                transform-origin: bottom center;
             }
         }
     }
@@ -145,4 +199,15 @@
     z-index: 8;
     background: rgba(0,0,0,.7);
     cursor: pointer;
+}
+
+@keyframes in {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }

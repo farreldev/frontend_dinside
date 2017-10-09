@@ -9,14 +9,48 @@
 .article-details {
     .article-read {
         .two-col-left-big {
-            article {
-                p {
-                    font-size: 18px;
-                    margin-bottom: 28px;
-                    line-height: 1.4em;
+            .lock {
+                article {
+                    position: relative;
+                    p {
+                        font-size: 18px;
+                        margin-bottom: 28px;
+                        line-height: 1.4em;
+                    }
+                    &:after {
+                        position: absolute;
+                        bottom: 0;
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100px;
+                        z-index: 1;
+                        background: rgba(255,255,255,0.35);
+                        background: -moz-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+                        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.35)), color-stop(85%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+                        background: -webkit-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+                        background: -o-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+                        background: -ms-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+                        background: linear-gradient(to bottom, rgba(255,255,255,0.35) 0%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+                    }
+                }
+                .lock-article {
+                    position: relative;
+                    text-align: center;
+                    text-transform: uppercase;
+                    p {
+                        font-family: 'adelle_sansregular';
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                    }
+                    a {
+                        width: 48%;
+                    }
                 }
             }
         }
+        
         .title-headline {
             h1 {
                 font-size: 2.8em;
