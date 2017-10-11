@@ -9,14 +9,14 @@
 .article-details {
     .article-read {
         .two-col-left-big {
+            p {
+                font-size: 18px;
+                margin-bottom: 28px;
+                line-height: 1.4em;
+            }
             .lock {
                 article {
                     position: relative;
-                    p {
-                        font-size: 18px;
-                        margin-bottom: 28px;
-                        line-height: 1.4em;
-                    }
                     &:after {
                         position: absolute;
                         bottom: 0;

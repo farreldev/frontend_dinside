@@ -171,14 +171,16 @@
             color: $orange;
             text-decoration: none;
             background: white;
-            padding-right: 15px;
+            overflow: hidden;
+            padding-left: 12px;
+            padding-right: 0;
             i {
-                font-size: 16px;
+                margin: 0 -1px 0 12px;
                 padding: 8px 12px;
+                font-size: 16px;
                 color: white;
                 background: $orange;
-                margin-right: 10px;
-                box-shadow: inset -4px 0 7px rgba(0,0,0,.1);
+                box-shadow: inset 4px 0 7px rgba(0,0,0,.1);
             }
             &.showClose {
                 display: inline-block;
