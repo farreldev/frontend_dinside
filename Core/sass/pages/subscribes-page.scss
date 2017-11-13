@@ -177,24 +177,6 @@
                 }
             }
         }
-        .faq {
-            padding: 30px 15px;
-            border-top: 1px solid #dddddd;
-            h3 {
-                font-family: "adelle_sansbold";
-                font-size: 24px;
-            }
-            dt {
-                font-family: "adelle_sansbold";
-                font-size: 18px;
-                margin-bottom: 22px;
-            }
-            dd {
-                font-size: 18px;
-                line-height: 1.4em;
-                margin-bottom: 30px;
-            }
-        }
         .not-found,
         .notifikasi {
             margin: 70px auto 0;
@@ -262,6 +244,7 @@
             }            
         }
         .form-payment,
+        .form-trial-reg,
         .form-register {
             margin-top: 65px;
             > div {
@@ -403,6 +386,9 @@
                     }
                 }
             }
+        }
+        .form-trial-reg {
+            margin-top: 0;
         }
         .form-payment {
             margin-top: 20px;

@@ -39,8 +39,8 @@ var paths = {
                     //path.join(__dirname, "bower_components/jcf/dist/css/demo.css"),
                     path.join(__dirname, "bower_components/jQCloud/jqcloud/jqcloud.css"),
                     path.join(__dirname, "bower_components/datetimepicker/build/jquery.datetimepicker.min.css"),
-                    // path.join(__dirname, "bower_components/slick-carousel/slick/slick.css"),
-                    // path.join(__dirname, "bower_components/slick-carousel/slick/slick-theme.css"),
+                    path.join(__dirname, "bower_components/slick-carousel/slick/slick.css"),
+                    path.join(__dirname, "bower_components/slick-carousel/slick/slick-theme.css"),
                     path.join(__dirname, "bower_components/animate_css/animate.css"),
 
                     // FONT AWESOME CSS
@@ -66,7 +66,7 @@ var paths = {
                     // path.join(__dirname, "bower_components/jcf/dist/js/jcf.select.js"),
                     path.join(__dirname, "bower_components/jQCloud/jqcloud/jqcloud-1.0.3.min.js"),
                     path.join(__dirname, "bower_components/datetimepicker/build/jquery.datetimepicker.full.min.js"),
-                    // path.join(__dirname, "bower_components/slick-carousel/slick/slick.min.js"),
+                    path.join(__dirname, "bower_components/slick-carousel/slick/slick.min.js"),
 
                     path.join(__dirname, "plugins/**/*.js"),
                 ],
@@ -144,7 +144,7 @@ gulp.task('html', function() {
           basepath: '@file'
         }))
         .pipe(gulp.dest(path.join(__dirname, targetPath)))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 });
 
 // copy the sass file task
@@ -165,7 +165,7 @@ gulp.task('sass', ['clean-sass'], function() {
             }
         }))
         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/css/')))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 });
 
 
@@ -185,7 +185,7 @@ gulp.task('sass_plugins', ['clean-sass-plugins'], function() {
             }
         }))
         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/css/')))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 });
 
 
@@ -225,14 +225,14 @@ gulp.task('pages', ['clean-pages'], function () {
             }
         }))
         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/css/')))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 });
 
 // copy javascript task
 gulp.task('js', ['clean-js'], function () {
     return gulp.src(paths.js.app)
         .pipe(concat('app.min.js'))
-        .pipe(uglifyjs())
+        // .pipe(uglifyjs())
         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/js/')));
 });
 

@@ -39,7 +39,7 @@
 
       <!-- HEADER -->
       <header class="site-header">
-        <div class="top-header animated fadeInDown">
+        <div class="top-header">
           <div class="container">
             <div class="top-left">
               <div class="humburger-btn">
@@ -47,7 +47,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <span class="hidden-xs">Menu</span>
+              <span id="mnu" class="hidden-xs">Menu</span>
               <span class="cari-btn">
                 <a href="#"><i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">Cari</span></a>
               </span>
@@ -83,12 +83,20 @@
           </div>
         </div>
         <ul>
-          <li><a href="#">Nasional</a></li>
-          <li><a href="#">Politik</a></li>
-          <li><a href="#">Bursa</a></li>
-          <li><a href="#">Korporasi</a></li>
-          <li><a href="#">Finansial</a></li>
-          <li><a href="#">Industri</a></li>
+          <li><a href="/">Beranda</a></li>
+          <li class="hasSub"><a href="#">Topik</a>
+            <ul>
+              <li><a href="#">Nasional</a></li>
+              <li><a href="#">Politik</a></li>
+              <li><a href="#">Bursa</a></li>
+              <li><a href="#">Korporasi</a></li>
+              <li><a href="#">Finansial</a></li>
+              <li><a href="#">Industri</a></li>
+            </ul>
+          </li>                    
+          <li><a href="about.html">Tentang Kami</a></li>          
+          <li><a href="archives.html">Arsip</a></li>          
+          <li><a href="contact.html">Hubungi Kami</a></li>          
         </ul>
         <a href="#" class="go-subscribe visible-xs">Subscribe</a>
       </nav>

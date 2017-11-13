@@ -19,7 +19,7 @@
                     position: fixed;
                     top: 11px;
                     left: 15px;
-                    z-index: 5;
+                    z-index: 6;
                     @include breakpoint(mobile) {
                         left: 50%;
                         transform: translateX(-50%);
@@ -55,7 +55,7 @@
         // padding: 65px 0 10px;
         position: relative;
         @include clearit;
-        height: 83px;
+        height: 95px;
         border-bottom: 1px solid #aaaaaa;
         h2 {
             position: relative;

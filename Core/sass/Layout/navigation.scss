@@ -13,8 +13,8 @@
     transition: left .3s ease-in-out;
     top: 55px;
     bottom: 0;
-    background: rgba(26,54,102,.95);
-    z-index: 3;
+    background: rgba(17, 28, 110, 0.95);
+    z-index: 4;
     .link-user-access {
         position: relative;
         background: rgba(0, 0, 0, 0.5);
@@ -22,7 +22,7 @@
         // background: #BDCEE3;
         padding: 20px 35px;
         a.btn {
-            font-family: "adelle_sanssemibold";
+            font-family: adelle_sanssemibold;
             font-size: 14px;
             text-transform: uppercase;
             padding: 7px 25px;
@@ -39,7 +39,7 @@
             a {
                 display: inline-block;
                 padding: 6px 8px;
-                font-family: "adelle_sanssemibold";
+                font-family: adelle_sanssemibold;
                 font-size: 14px;
                 text-transform: uppercase;
                 border: 1px solid white;
@@ -62,7 +62,7 @@
     .go-subscribe {
         margin: 30px 40px 0 35px;
         padding: 15px;
-        font-family: "adelle_sanssemibold";
+        font-family: adelle_sanssemibold;
         font-size: 16px;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -85,6 +85,16 @@
     ul {
         position: relative;
         padding: 20px 0 0;
+        ul {
+            padding: 0;
+            background: rgba(12, 15, 44, 0.99);
+            display: none;
+            li {
+                a {
+                    padding: 15px 0 15px 55px;                
+                }
+            }
+        }
         li {
             position: relative;
             // text-align: center;
@@ -92,11 +102,11 @@
                 position: relative;
                 padding: 15px 35px;
                 display: block;
-                font-family: "adelle_sansextrabold";
-                font-size: 22px;
+                font-family: adelle_sansbold;
+                font-size: 20px;
                 text-decoration: none;
                 text-transform: uppercase;
-                color: $orange;
+                color: rgb(100, 233, 253);
                 z-index: 2;
                 &:hover {
                     color: white;
@@ -110,8 +120,42 @@
                 height: 100%;
                 transform: scaleX(0);
                 transform-origin: left;
-                background: rgba(0,0,0,.5);
+                // background: rgba(0,0,0,.5);
+                background: rgba(20, 9, 54, 0.5);
+                border-left: 5px solid $orange;
                 transition: all .3s ease-in-out;
+            }
+            &.hasSub {
+                ul {
+                    li {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                &:after {
+                    font-family: Fontawesome;
+                    font-size: 18px;
+                    color: white;
+                    position: absolute;
+                    top: 17px;
+                    right: 20px;
+                    transition: transform .4s ease-in-out;                 
+                    content: '\f078';
+                }
+                &.subClose {
+                    &:after {
+                        transform: rotate(-180deg);
+                        transition: transform .4s ease-in-out;
+                    }
+                }
+            }
+            &.hasSub:hover {
+                li {
+                    &:before {
+                        display: none;
+                    }
+                }
             }
             &:hover{
                 &:before {
@@ -132,7 +176,7 @@
     display: none;
     background: rgba(0,0,0,.55);
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
     @include breakpoint(mobile) {
         left: 100%;
     }

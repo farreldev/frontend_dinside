@@ -39,7 +39,7 @@
 
       <!-- HEADER -->
       <header class="site-header">
-        <div class="top-header animated fadeInDown">
+        <div class="top-header">
           <div class="container">
             <div class="top-left">
               <div class="humburger-btn">
@@ -47,7 +47,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <span class="hidden-xs">Menu</span>
+              <span id="mnu" class="hidden-xs">Menu</span>
               <span class="cari-btn">
                 <a href="#"><i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">Cari</span></a>
               </span>
@@ -83,12 +83,20 @@
           </div>
         </div>
         <ul>
-          <li><a href="#">Nasional</a></li>
-          <li><a href="#">Politik</a></li>
-          <li><a href="#">Bursa</a></li>
-          <li><a href="#">Korporasi</a></li>
-          <li><a href="#">Finansial</a></li>
-          <li><a href="#">Industri</a></li>
+          <li><a href="/">Beranda</a></li>
+          <li class="hasSub"><a href="#">Topik</a>
+            <ul>
+              <li><a href="#">Nasional</a></li>
+              <li><a href="#">Politik</a></li>
+              <li><a href="#">Bursa</a></li>
+              <li><a href="#">Korporasi</a></li>
+              <li><a href="#">Finansial</a></li>
+              <li><a href="#">Industri</a></li>
+            </ul>
+          </li>                    
+          <li><a href="about.html">Tentang Kami</a></li>          
+          <li><a href="archives.html">Arsip</a></li>          
+          <li><a href="contact.html">Hubungi Kami</a></li>          
         </ul>
         <a href="#" class="go-subscribe visible-xs">Subscribe</a>
       </nav>
@@ -185,7 +193,7 @@
               <article>
                 <h3><span>Tentang D-Inside</span></h3>
                 <p>Lorem ipsum dolor sit amet, coLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas varius arcu sed congue. Phasellus laoreet accumsan ipsum.</p>
-                <a href="">Kenapa Anda mesti berlangganan D-Inside? »</a>
+                <a href="">Kenapa harus berlangganan D-Inside? »</a>
               </article>
             </div>
             <div class="col-md-4 margin-bottom-30">
@@ -235,14 +243,14 @@
       <div class="signin-modal">
         <div class="frmWrapper">
           <div class="box-header">
-              <h3>Login</h3>
-            </div>
-            <div class="box-content">
-              <div class="frmLogin">
-                <ul>
-                  <li><a href="">Google <img src="assets/images/icons/google.png" alt=""></a></li>
-                  <li><a href="">Linkedin <img src="assets/images/icons/linkedin.png" alt=""></a></li>
-                  <li><a href="">Twitter <img src="assets/images/icons/twitter.png" alt=""></a></li>
+            <h3>Login</h3>
+          </div>
+          <div class="box-content">
+            <div class="frmLogin">
+              <ul>
+                <li><a href="">Google <img src="assets/images/icons/google.png" alt=""></a></li>
+                <li><a href="">Linkedin <img src="assets/images/icons/linkedin.png" alt=""></a></li>
+                <li><a href="">Twitter <img src="assets/images/icons/twitter.png" alt=""></a></li>
               </ul>
               <h6><span>Atau</span></h6>
               <form class="form-horizontal custom-form">
@@ -257,31 +265,80 @@
                   </div>
                 </div>
                 <div class="text-center rememberMe">
-                      <input id="ingatkan" type="checkbox" value="">
-                      <label for="ingatkan">Ingatkan saya</label>
-                      <a id="lupaPassword">Lupa Password?</a>
-                    </div>
-                    <button type="submit" class="btn btn-block btn-orange">Login</button>
-                  </form>
-                  <span class="goSubscribe">Belum punya akun? <a href="#">Sign In</a></span>
+                  <input id="ingatkan" type="checkbox" value="">
+                  <label for="ingatkan">Ingatkan saya</label>
+                  <a id="lupaPassword">Lupa Password?</a>
                 </div>
-                <div class="frmLupaPassword">
-                  <p class="text-center">Masukkan alamat e-mail Anda dan kami akan mengirimkan link untuk mereset kata sandi Anda</p>
-                  <form class="form-horizontal custom-form">
-                    <div class="form-group">
-                      <div class="col-md-12">
-                        <input type="email" class="form-control" id="mailResetPass" placeholder="Email">
-                      </div>
-                    </div>
-                    <a href="#" id="backLogin"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali ke Login</a>
-                    <button type="submit" class="btn btn-block btn-orange">Reset Password</button>
-                  </form>
-                  <span class="goSubscribe">Belum punya akun? <a href="#">Sign In</a></span>
+                <button type="submit" class="btn btn-block btn-orange">Login</button>
+              </form>
+              <span class="goSubscribe">Belum punya akun? <a href="#">Sign Up</a></span>
+            </div>
+            <div class="frmLupaPassword">
+              <p class="text-center">Masukkan alamat e-mail Anda dan kami akan mengirimkan link untuk mereset kata sandi Anda</p>
+              <form class="form-horizontal custom-form">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="mailResetPass" placeholder="Email">
+                  </div>
+                </div>
+                <a href="#" id="backLogin"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Kembali ke Login</a>
+                <button type="submit" class="btn btn-block btn-orange">Reset Password</button>
+              </form>
+              <span class="goSubscribe">Belum punya akun? <a href="#">Sign In</a></span>
+            </div>
+            </div>
+            <a href="" id="closeFrm" class="closeFrm">Tutup <i class="fa fa-times" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      <div id="ref_modal" class="ref_modal">
+        <div class="frmWrapper">
+          <div class="box-content">
+            <div class="frmLogin">
+              <form class="form-horizontal custom-form">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <p class="tebal">Nomor Telepon*</p>
+                    <input type="text" class="form-control" id="txtTelp" placeholder="Masukkan nomor telepon Anda">
+                    <p class="small"><b>*</b> Wajib diisi untuk keperluan korespondensi. Kami menjaga kerahasiaan data pribadi Anda.</p>
+                  </div>
+                </div>
+                <p class="tebal">
+                  Rekomendasikan rekan/kolega Anda untuk mendapatkan free trial Akses D-Inside selama tiga bulan. (Optional)
+                </p>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="txtEmail1" placeholder="Email 1">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="txtEmail2" placeholder="Email 2">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="txtEmail3" placeholder="Email 3">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="txtEmail4" placeholder="Email 4">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="txtEmail5" placeholder="Email 5">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-orange pull-right">Kirim</button>
+              </form>
             </div>
           </div>
           <a href="" id="closeFrm" class="closeFrm">Tutup <i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
       </div>
+
       <div class="overlay-box"></div>
     </div>
     
@@ -289,7 +346,22 @@
     <script src="assets/js/vendor.min.js" ></script>
     <script src="assets/js/plugins.min.js" ></script>
     <script src="assets/js/app.min.js" ></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwTLUze8MdZqRHfGM26MLB1zqQjyD-9bk&callback=initMap"></script>
     
+    <script>
+      function initMap() {
+      var koor = {lat: -6.220288, lng: 106.791991};
+      var map = new google.maps.Map(document.getElementById('mapLocation'), {
+        zoom: 17,
+        center: koor
+      });
+      var marker = new google.maps.Marker({
+        position: koor,
+        map: map
+      });
+    }
+    </script>
+
     
 
   </body>

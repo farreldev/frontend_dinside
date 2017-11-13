@@ -1,3 +1,4 @@
+.ref_modal,
 .signin-modal {
     position: fixed;
     display: none;
@@ -28,7 +29,7 @@
                 margin-bottom: 25px;
                 display: block;
                 text-align: center;
-                font-family: "adelle_sansregular";
+                font-family: adelle_sansregular;
                 font-size: 24px;
                 @include breakpoint(mobile) {
                     font-size: 18px;
@@ -38,6 +39,12 @@
         }
         .box-content {
             @include clearit;
+            .tebal {
+                font-family: adelle_sanssemibold;
+                font-size: 16px;
+                line-height: 1.5em;
+                margin-bottom: 15px;
+            }
             ul {
                 @include clearit;
                 margin-bottom: 22px;
@@ -47,7 +54,6 @@
                 li {
                     float: left;
                     padding: 0 4px;
-                    display: inline-block;
                     width: calc(100% / 3);
                     @include breakpoint(mobile) {
                         width: 100%;
@@ -79,7 +85,7 @@
                 position: relative;
                 margin-bottom: 22px;
                 display: block;
-                font-family: "adelle_sansbold";
+                font-family: adelle_sansbold;
                 font-size: 12px;
                 text-transform: uppercase;
                 text-align: center;
@@ -125,7 +131,7 @@
                 }
                 label {
                     position: relative;
-                    font-family: "adelle_sanslight";
+                    font-family: adelle_sanslight;
                     font-size: 15px;
                     color: #999999;
                     margin-right: 18px;
@@ -137,7 +143,7 @@
                     }
                 }
                 a {
-                    font-family: "adelle_sansregular";
+                    font-family: adelle_sansregular;
                     font-size: 15px;
                     color: $biru;
                     cursor: pointer;
@@ -151,7 +157,7 @@
                 font-size: 14px;
                 a {
                     margin-bottom: 0;
-                    font-family: "adelle_sanssemibold";
+                    font-family: adelle_sanssemibold;
                     font-size: 14px;
                     text-transform: uppercase;
                 }
@@ -164,7 +170,7 @@
             position: absolute;
             top: -52px;
             right: -15px;
-            font-family: "adelle_sansbold";
+            font-family: adelle_sansbold;
             font-size: 13px;
             text-transform: uppercase;
             display: none;
@@ -190,6 +196,9 @@
         }
     }
 }
+.ref_modal {
+    top: 45%;    
+}
 .overlay-box {
     position: fixed;
     display: none;
@@ -199,7 +208,7 @@
     bottom: 0;
     left: 0;
     z-index: 8;
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,.55);
     cursor: pointer;
 }
 

@@ -8,26 +8,33 @@
 
 .homepage {
 	.headlines-article {
-		height: 452px;
-		@include breakpoint(mobile) {
-			height: auto;
-		}
+		height: 458px;
 		@include breakpoint(tablet) {
 			height: auto;
 		}
-		img {
-			width: 100%;
-			height: 452px;
+		@include breakpoint(mobile) {
+			height: auto;
+		}
+		figure {
+			height: 458px;
+			overflow: hidden;
 			@include breakpoint(mobile) {
 				height: auto;
 			}
-			@include breakpoint(tablet) {
-				height: auto;
+			img {
+				width: 100%;
+				height: 100%;
+				@include breakpoint(mobile) {
+					height: auto;
+				}
+				@include breakpoint(tablet) {
+					height: auto;
+				}
 			}
 		}
 		.article-info {
 			padding: 25px 30px 25px;
-			height: 452px;
+			height: 458px;
 			@include breakpoint(mobile) {
 				height: auto;
 			} 
@@ -39,7 +46,7 @@
 			article {
 				p {
 					padding: 20px 0;
-					font-size: 21px;
+					font-size: 20px;
 					line-height: 1.5em;
 				}
 			}
